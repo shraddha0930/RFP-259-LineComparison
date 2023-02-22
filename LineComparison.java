@@ -37,10 +37,12 @@ public class LineComparison
 		L1 = x2 - x1;
 		L2 = y2 - y1;
 
-		if(L1.equals(L2))
-			System.out.println("Both length are equal");
-		else
-			System.out.println("Both length are not equal");
+//		if(L1.equals(L2))
+//			System.out.println("Both length are equal");
+//		else
+//			System.out.println("Both length are not equal");
+
+		System.out.println(L1.compareTo(L2));
 
 	}
 }
