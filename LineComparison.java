@@ -4,45 +4,55 @@ import java.util.Scanner;
 
 public class LineComparison
 {
+
+	public void CalculateLine()
+	{
+		System.out.println("Welcome To Line Comparison Computation Program");
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Enter the value of co-ordinate ");
+		System.out.println("x1: ");
+		int x1 = sc.nextInt();
+		System.out.println("y1: ");
+		int y1 = sc.nextInt();
+		System.out.println("x2: ");
+		int x2 = sc.nextInt();
+		System.out.println("y2: ");
+		int y2 = sc.nextInt();
+
+		double lengthofLine1 =Math.sqrt(Math.pow(x2-x1,2) + Math.pow(y2-y1,2));
+		System.out.println("Length of First Line : "+ lengthofLine1);
+
+		System.out.println("Enter the value next co-ordinate ");
+		System.out.println("x3: ");
+		int x3 = sc.nextInt();
+		System.out.println("y3:");
+		int y3 = sc.nextInt();
+		System.out.println("x4: ");
+		int x4 = sc.nextInt();
+		System.out.println("y4: ");
+		int y4 = sc.nextInt();
+
+		double lengthofLine2 =Math.sqrt(Math.pow(x4-x3,2) + Math.pow(y4-y3,2));
+		System.out.println("Length of Second Line : "+ lengthofLine2);
+
+		if(lengthofLine1 < lengthofLine2)
+		{
+			System.out.println("LengthofLine1 is less than LengthofLine2");
+		}
+		else if(lengthofLine1 > lengthofLine2)
+		{
+			System.out.println("LengthofLine1 is Greater than LengthofLine2");
+		}
+		else
+		{
+			System.out.println("Two lines are Equal");
+		}
+	}
 	public static void main(String args[])
 	{
-		System.out.println("Welcome To Line Comparison Computation Program on Master Branch");
-		Long x1,x2,y1,y2;
-		Long L1, L2;
-
-		//double Length;
-
-		Scanner sc=new Scanner(System.in);
-
-		System.out.println("enter x1 point");
-
-		x1=sc.nextLong();
-
-		System.out.println("enter y1 point");
-
-		y1=sc.nextLong();
-
-		System.out.println("enter x2 point");
-
-		x2=sc.nextLong();
-
-		System.out.println("enter y2 point");
-
-		y2=sc.nextLong();
-
-		//Length=Math.sqrt((x2-x1)^2 + (y2-y1)^2);
-
-		//System.out.println("Distance between"+"("+x1+","+y1+"),"+"("+x2+","+y2+"):"+Length);
-
-		L1 = x2 - x1;
-		L2 = y2 - y1;
-
-//		if(L1.equals(L2))
-//			System.out.println("Both length are equal");
-//		else
-//			System.out.println("Both length are not equal");
-
-		System.out.println(L1.compareTo(L2));
-
+		LineComparison lineComparison = new LineComparison();
+		lineComparison.CalculateLine();
 	}
 }
